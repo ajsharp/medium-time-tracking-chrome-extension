@@ -9,15 +9,13 @@ jQuery(document).ready(function($) {
       "origin"        : window.location.href
     }
 
-    if(window.location.href.match(/edit$/)) {
-      $.ajax({
-        url: 'https://medium-time-tracking.herokuapp.com/track',
-        type: "POST",
-        data: payload,
-        dateType: 'json',
-        async: false
-      })
-    }
+    $.ajax({
+      url: 'https://medium-time-tracking.herokuapp.com/track/' + type,
+      type: "POST",
+      data: payload,
+      dateType: 'json',
+      async: false
+    })
   }
 
   post.title = $('h1.post-title').html()
