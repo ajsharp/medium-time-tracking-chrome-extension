@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Medium Time Tracking",
+  "description": "Track time spent writing on medium so you can see how you progress over time.",
+  "version": "1.0",
+
+  "permissions": [
+    "https://medium.com/", "tabs", "https://*/*", "http://*/*"
+  ],
+  "browser_action": {},
+  "content_scripts": [{
+    "all_frames": true,
+    "run_at":     "document_start",
+    "matches":    ["https://medium.com/*"],
+    "js":         ["jquery-2.0.2.min.js", "tracking.js"]
+  }]
+
+}
