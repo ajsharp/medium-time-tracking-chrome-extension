@@ -9,13 +9,15 @@ jQuery(document).ready(function($) {
       "origin"        : window.location.href
     }
 
-    $.ajax({
-      url: 'https://medium-time-tracking.herokuapp.com/track',
-      type: "POST",
-      data: payload,
-      dateType: 'json',
-      async: false
-    })
+    if(window.location.href.match(/edit$/)) {
+      $.ajax({
+        url: 'https://medium-time-tracking.herokuapp.com/track',
+        type: "POST",
+        data: payload,
+        dateType: 'json',
+        async: false
+      })
+    }
   }
 
   post.title = $('h1.post-title').html()
