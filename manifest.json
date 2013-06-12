@@ -3,7 +3,7 @@
 
   "name": "Medium Time Tracking",
   "description": "Track time spent writing on medium so you can see how you progress over time.",
-  "version": "1.0",
+  "version": "1.1",
 
   "permissions": [
     "https://medium.com/", "tabs", "https://*/*", "http://*/*"
