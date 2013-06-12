@@ -5,7 +5,8 @@ jQuery(document).ready(function($) {
       "ts"            : (new Date()).toJSON(),
       "post_title"    : post.title,
       "post_id"       : post.id,
-      "tracking_type" : type
+      "tracking_type" : type,
+      "origin"        : window.location.href
     }
 
     $.ajax({
