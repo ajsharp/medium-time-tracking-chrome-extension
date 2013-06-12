@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
     }
 
     $.ajax({
-      url: 'http://localhost:3132/track',
+      url: 'https://medium-time-tracking.herokuapp.com/track',
       type: "POST",
       data: payload,
       dateType: 'json',
